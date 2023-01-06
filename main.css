@@ -182,7 +182,7 @@
   margin-left: calc(50% - (var(--calendar-size)*0.5)/2);
   padding: var(--base-size);
   text-align: center;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .things-to-do p {
   width: 100%;
