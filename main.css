@@ -142,7 +142,7 @@
   width: calc(var(--calendar-size)*0.7);
   height: calc(var(--calendar-size)*0.8);
   background-color: var(--color-white);
-  border: solid 3px var(--color-green);
+  border: solid 2px var(--color-green);
   border-radius: var(--base-size);
   margin-left: calc(50% - (var(--calendar-size)*0.7)/2);
   margin-top: calc(var(--base-size)*3);
@@ -170,13 +170,14 @@
 #addToDo {
   width: 10%;
   height: calc(var(--base-size)*1.7);
+  text-align: center;
   cursor: pointer;
 }
 .things-to-do {
   width: calc(var(--calendar-size)*0.5);
   height: calc(var(--calendar-size)*0.42);
   background-color: var(--color-white);
-  border: 1.8px dashed var(--color-black);
+  border: 1.2px dashed var(--color-black);
   border-radius: calc(var(--base-size)*0.5);
   margin-left: calc(50% - (var(--calendar-size)*0.5)/2);
   padding: var(--base-size);
