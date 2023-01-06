@@ -172,16 +172,16 @@
   height: calc(var(--base-size)*1.7);
   cursor: pointer;
 }
-.things-to-do{
-  position: absolute;
+.things-to-do {
   width: calc(var(--calendar-size)*0.5);
   height: calc(var(--calendar-size)*0.42);
   background-color: var(--color-white);
   border: 1.8px dashed var(--color-black);
   border-radius: calc(var(--base-size)*0.5);
-  margin-left: calc(50% - (var(--calendar-size)*0.47));
+  margin-left: calc(50% - (var(--calendar-size)*0.5)/2);
   padding: var(--base-size);
   text-align: center;
+  /* line-height: calc(var(--base-size)*1.4); */
 }
 .things-to-do p {
   width: 100%;
@@ -197,7 +197,7 @@
 #save {
   width: calc(var(--calendar-size)*0.15);
   height: calc(var(--base-size)*1.5);
-  margin-top: calc(var(--base-size)*13.5);
+  margin-top: calc(var(--base-size)*0.8);
   margin-left: calc(50% - (var(--calendar-size)*0.15)/2);
   background-color: var(--color-gray1);
   border: 1px solid var(--color-black);
