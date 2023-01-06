@@ -1,0 +1,17 @@
+@import url("./theme.css");
+
+@media screen and (min-width: 768px) {
+  :root {
+    --calendar-size: 700px;
+  }
+}
+@media screen and (max-width: 768px) {
+  :root {
+    --calendar-size: 500px;
+  }
+}
+@media screen and (max-width: 480px) {
+  :root {
+    --calendar-size: 300px;
+  }
+}

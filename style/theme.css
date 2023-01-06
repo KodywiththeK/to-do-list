@@ -1,0 +1,25 @@
+:root {
+  --base-size: calc(var(--calendar-size)/30);
+  --font-family: 'Open Sans', 'Noto Sans KR', sans-serif;
+  --color-green: rgba(25, 207, 80, 90%);
+  --color-white: #FFFFFF;
+  --color-black: #181818;
+  --color-gray3: #AAA9A9;
+  --color-gray2: #E7E7E7;
+  --color-gray1: #F3F3F3;
+  --color-red: #db5b33;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: var(--base-size);
+}
+body {
+  font-family: var(--font-family);
+  font-weight: 300;
+}
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Picker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=block" rel="stylesheet" />
+    <link rel="stylesheet" href="/main.css">
+    <script type="module" src="/main.js"></script>
+  </head>
+
+  <body>
+    <div class="container" tabindex="1">
+      <h1 class="title">To-do List</h1>
+      <input tabindex="1" class="select-date" type="text" placeholder="Select date" value="" readonly>
+      <div tabindex="1" class="calendar" hidden>
+        <div class="calendar-nav">
+          <i class='bx bxs-left-arrow'></i>
+          <div class="year-month">
+            <div class="month">February</div>
+            <div class="year">2023</div>
+          </div>
+          <i class='bx bxs-right-arrow'></i>
+        </div>
+        <div class="calendar-grid">
+          <div class="days">
+            <div class="day">SUN</div>
+            <div class="day">MON</div>
+            <div class="day">TUE</div>
+            <div class="day">WED</div>
+            <div class="day">THU</div>
+            <div class="day">FRI</div>
+            <div class="day">SAT</div>
+          </div>
+          <div class="dates"></div>
+        </div>
+      </div>
+      <div class="memo-container" tabindex="1" hidden>
+        <div class="title-of-memo">Things to-do on...<p class="memo-date">Pick the date first👆🏻</p></div>
+        <input type="text" id="inputField" placeholder="Add things to-do" tabindex="2">
+        <button id="addToDo" tabindex="2">+</button>
+        <div class="things-to-do" id="toDoContainer"></div>
+        <button id="save">SAVE</button>
+      </div>
+    </div>
+
+  </body>
+
+</html>
