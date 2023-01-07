@@ -130,10 +130,10 @@ body {
 .memo-exist::after {
   content: '';
   position: absolute;
-  width: 4px;
-  height: 4px;
+  width: 4.5px;
+  height: 4.5px;
   border-radius: 100%;
-  top: calc(var(--base-size)*2.15);
+  top: calc(var(--base-size)*2);
   background-color: var(--color-red);
 }
 .today {
