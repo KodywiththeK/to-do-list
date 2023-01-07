@@ -1,4 +1,5 @@
 :root {
+  --calendar-size : 100vw;
   --base-size: calc(var(--calendar-size)/30);
   --font-family: 'Open Sans', 'Noto Sans KR', sans-serif;
   --color-green: rgba(25, 207, 80, 90%);
