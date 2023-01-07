@@ -209,7 +209,7 @@ const getPickedDay = () => {
         }
       }
       // 더블클릭하면 메모 삭제
-      const toDoItems = document.querySelectorAll('.to-do-item')
+      const toDoItems = document.querySelectorAll('.line')
       for(let i=0; i<toDoItems.length; i++) {
         toDoItems[i].addEventListener('dblclick', function() {
           thingsToDo.removeChild(toDoItems[i])
@@ -236,14 +236,16 @@ container.addEventListener('focus', () => {
 
 
 addToDo.addEventListener('click', function () {
+  const line = makeDOMwithProperties('div', {className: 'line'})
   const paragraph = makeDOMwithProperties('p', {className: 'to-do-item'})
   
-  thingsToDo.appendChild(paragraph)
+  thingsToDo.appendChild(line)
+  line.appendChild(paragraph)
   paragraph.innerText = inputField.value;
   inputField.value = ''
 
   // 더블클릭하면 메모 삭제
-  const toDoItems = document.querySelectorAll('.to-do-item')
+  const toDoItems = document.querySelectorAll('.line')
   for(let i=0; i<toDoItems.length; i++) {
     toDoItems[i].addEventListener('dblclick', function() {
       thingsToDo.removeChild(toDoItems[i])
@@ -260,7 +262,7 @@ inputField.addEventListener('keypress', function (e) {
     inputField.value = ''
   }
   // 더블클릭하면 메모 삭제
-  const toDoItems = document.querySelectorAll('.to-do-item')
+  const toDoItems = document.querySelectorAll('.line')
   for(let i=0; i<toDoItems.length; i++) {
     toDoItems[i].addEventListener('dblclick', function() {
       thingsToDo.removeChild(toDoItems[i])
@@ -288,12 +290,12 @@ save.addEventListener('click', function() {
     arr.push(paragraph[i].innerHTML)
   }
   if(arr.length == 0) {
-    window.alert(`You have nothing to do on ${date}`)
+    window.alert(`You have no events on ${date}`)
     localStorage.removeItem(date)
     clickableDate[getDay()].classList.remove('memo-exist')
     location.reload();
   } else {
-    window.alert(`You have "${arr}" to do on ${date}`)
+    window.alert(`You have ${arr.length} events(${arr}) on ${date}`)
     localStorage.setItem(date, arr)
     clickableDate[getDay()].classList.add('memo-exist')
     location.reload();
