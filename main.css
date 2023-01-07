@@ -182,7 +182,7 @@
   border: 1.2px dashed var(--color-black);
   border-radius: calc(var(--base-size)*0.5);
   margin-left: calc(50% - (var(--calendar-size)*0.7)/2);
-  margin-bottom: calc(var(--base-size)*0.5);
+  margin-bottom: calc(var(--base-size)*0.3);
   padding: var(--base-size);
   text-align: center;
   overflow-y: scroll;
@@ -208,13 +208,15 @@
 .notifications > p {
   /* flex-shrink: 0; */
   /* flex-wrap: nowrap; */
-  font-size: calc(var(--base-size)*0.5);
+  font-size: calc(var(--base-size)*0.6);
   margin-left: calc(var(--base-size)*0.5);
+  font-weight: 400;
+  font-style: italic;
 }
 #save {
   width: calc(var(--calendar-size)*0.15);
   height: calc(var(--base-size)*1.9);
-  /* margin-top: calc(var(--base-size)*0.05); */
+  margin-top: calc(var(--base-size)*0.1);
   margin-right: calc(var(--base-size)*0.5);
   background-color: var(--color-green);
   border: 1px solid var(--color-white);
