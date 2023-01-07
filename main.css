@@ -139,12 +139,12 @@
 }
 
 .memo-container{
-  width: calc(var(--calendar-size)*0.7);
-  height: calc(var(--calendar-size)*0.8);
+  width: calc(var(--calendar-size)*0.8);
+  height: calc(var(--calendar-size)*0.85);
   background-color: var(--color-white);
   border: solid 2px var(--color-green);
   border-radius: var(--base-size);
-  margin-left: calc(50% - (var(--calendar-size)*0.7)/2);
+  margin-left: calc(50% - (var(--calendar-size)*0.8)/2);
   margin-top: calc(var(--base-size)*3);
   padding: var(--base-size);
 }
@@ -174,35 +174,50 @@
   cursor: pointer;
 }
 .things-to-do {
-  width: calc(var(--calendar-size)*0.5);
-  height: calc(var(--calendar-size)*0.42);
+  width: calc(var(--calendar-size)*0.7);
+  height: calc(var(--calendar-size)*0.5);
   background-color: var(--color-white);
   border: 1.2px dashed var(--color-black);
   border-radius: calc(var(--base-size)*0.5);
-  margin-left: calc(50% - (var(--calendar-size)*0.5)/2);
+  margin-left: calc(50% - (var(--calendar-size)*0.7)/2);
+  margin-bottom: calc(var(--base-size)*0.5);
   padding: var(--base-size);
   text-align: center;
   overflow-y: scroll;
+  overflow-wrap: break-word;
 }
 .things-to-do p {
   width: 100%;
-  height: calc(var(--base-size)*1.6);
-  margin-bottom: calc(var(--base-size)*0.2);
+  height: auto;
+  margin-bottom: calc(var(--base-size)*0.3);
   background-color: var(--color-gray1);
   border-bottom: 1px double black;
-  border-radius: var(--base-size);
+  /* border-radius: var(--base-size); */
   cursor: pointer;
-  font-style: italic;
+  /* font-style: italic; */
   font-weight: 400;
+  font-size: calc(var(--base-size)*0.8);
+  text-overflow: ellipsis;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.notifications > p {
+  /* flex-shrink: 0; */
+  /* flex-wrap: nowrap; */
+  font-size: calc(var(--base-size)*0.5);
+  margin-left: calc(var(--base-size)*0.5);
 }
 #save {
   width: calc(var(--calendar-size)*0.15);
-  height: calc(var(--base-size)*1.5);
-  margin-top: calc(var(--base-size)*0.8);
-  margin-left: calc(50% - (var(--calendar-size)*0.15)/2);
-  background-color: var(--color-gray1);
-  border: 1px solid var(--color-black);
+  height: calc(var(--base-size)*1.9);
+  /* margin-top: calc(var(--base-size)*0.05); */
+  margin-right: calc(var(--base-size)*0.5);
+  background-color: var(--color-green);
+  border: 1px solid var(--color-white);
   border-radius: calc(var(--base-size)*0.5);
-  color: var(--color-black);
+  color: var(--color-white);
   cursor: pointer;
+  font-size: calc(var(--base-size)*.8);
 }
