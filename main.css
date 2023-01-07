@@ -250,7 +250,7 @@ body {
 }
 .copy-right {
   position: absolute;
-  top: calc(var(--calendar-size)*1.33);
+  top: calc(var(--calendar-size)*1.37);
   left: calc(var(--calendar-size)*0.65);
   font-size: calc(var(--base-size)*0.9);
   font-weight: 400;
