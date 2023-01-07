@@ -225,3 +225,11 @@
   cursor: pointer;
   font-size: calc(var(--base-size)*.8);
 }
+.copy-right {
+  position: fixed;
+  top: calc(var(--calendar-size)*1.27);
+  left: calc(var(--calendar-size)*0.87);
+  font-size: calc(var(--base-size)*0.9);
+  font-weight: 400;
+  font-style: italic;
+}
