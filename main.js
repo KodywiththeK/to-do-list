@@ -12,6 +12,7 @@ const clickableDate = document.getElementsByClassName('clickable')
 const selectDate = document.getElementsByClassName('select-date')[0]
 const calendar = document.getElementsByClassName('calendar')[0]
 const container = document.getElementsByClassName('container')[0]
+const title = document.getElementsByClassName('title')[0]
 
 
 const memoContainer = document.getElementsByClassName('memo-container')
@@ -133,6 +134,9 @@ function changeMonth(diff) {
   }
 }
 
+title.onclick = () => {
+  location.reload();
+}
 
 leftArrow.onclick = () => {
   dates.replaceChildren();
