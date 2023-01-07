@@ -112,8 +112,9 @@ function loading() {
 function firstLoad() {
   changeYearMonth(current_year, current_month);
   for(let i=0; i<clickableDate.length; i++) {
-    if(clickableDate[i].innerHTML == (new Date()).getDay()) {
-      clickableDate[i+1].classList.add('today')
+    // console.log((new Date().getDay()))
+    if(clickableDate[i].innerHTML == (new Date()).getDate()) {
+      clickableDate[i].classList.add('today')
       // clickableDate[i+1].innerHTML = `Today`
     }
   }
