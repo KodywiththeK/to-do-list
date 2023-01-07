@@ -204,14 +204,21 @@ const getPickedDay = () => {
       // 만약 선택된 날짜에 저장된 메모가 있으면 불러와서 보여줌
       if(getOriginalItems() !== false) {
         for(let i=0; i<getOriginalItems().length; i++) {
-          let item = makeDOMwithProperties('p', {className: 'to-do-item', innerHTML: `${getOriginalItems()[i]}`})
-          thingsToDo.appendChild(item)
+          const line = makeDOMwithProperties('div', {className: 'line'})
+          const paragraph = makeDOMwithProperties('p', {className: 'to-do-item', innerHTML: `${getOriginalItems()[i]}`})
+          
+          thingsToDo.appendChild(line)
+          line.appendChild(paragraph)
+          // let item = makeDOMwithProperties('p', {className: 'to-do-item', innerHTML: `${getOriginalItems()[i]}`})
+          // thingsToDo.appendChild(item)
         }
       }
       // 더블클릭하면 메모 삭제
       const toDoItems = document.querySelectorAll('.line')
-      for(let i=0; i<toDoItems.length; i++) {
-        toDoItems[i].addEventListener('dblclick', function() {
+      const Items = document.querySelectorAll('.to-do-item')
+      for(let i=0; i<Items.length; i++) {
+        Items[i].addEventListener('dblclick', function() {
+          // toDoItems.removeChild(Items[i])
           thingsToDo.removeChild(toDoItems[i])
         })
       }
@@ -246,8 +253,10 @@ addToDo.addEventListener('click', function () {
 
   // 더블클릭하면 메모 삭제
   const toDoItems = document.querySelectorAll('.line')
-  for(let i=0; i<toDoItems.length; i++) {
-    toDoItems[i].addEventListener('dblclick', function() {
+  const Items = document.querySelectorAll('.to-do-item')
+  for(let i=0; i<Items.length; i++) {
+    Items[i].addEventListener('dblclick', function() {
+      // toDoItems.removeChild(Items[i])
       thingsToDo.removeChild(toDoItems[i])
     })
   }
@@ -255,16 +264,20 @@ addToDo.addEventListener('click', function () {
 
 inputField.addEventListener('keypress', function (e) {
   if (e.key === 'Enter') {
+    const line = makeDOMwithProperties('div', {className: 'line'})
     const paragraph = makeDOMwithProperties('p', {className: 'to-do-item'})
-  
-    thingsToDo.appendChild(paragraph)
+    
+    thingsToDo.appendChild(line)
+    line.appendChild(paragraph)
     paragraph.innerText = inputField.value;
     inputField.value = ''
   }
   // 더블클릭하면 메모 삭제
   const toDoItems = document.querySelectorAll('.line')
-  for(let i=0; i<toDoItems.length; i++) {
-    toDoItems[i].addEventListener('dblclick', function() {
+  const Items = document.querySelectorAll('.to-do-item')
+  for(let i=0; i<Items.length; i++) {
+    Items[i].addEventListener('dblclick', function() {
+      // toDoItems.removeChild(Items[i])
       thingsToDo.removeChild(toDoItems[i])
     })
   }
@@ -293,6 +306,11 @@ save.addEventListener('click', function() {
     window.alert(`You have no events on ${date}`)
     localStorage.removeItem(date)
     clickableDate[getDay()].classList.remove('memo-exist')
+    location.reload();
+  } else if (arr.length == 1) {
+    window.alert(`You have ${arr.length} event(${arr}) on ${date}`)
+    localStorage.setItem(date, arr)
+    clickableDate[getDay()].classList.add('memo-exist')
     location.reload();
   } else {
     window.alert(`You have ${arr.length} events(${arr}) on ${date}`)
